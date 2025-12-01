@@ -4,9 +4,9 @@ import hashlib
 import time
 import streamlit as st
 import requests
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import SentenceTransformerEmbeddings
+from langchain.text_splitter import CharacterTextSplitter  # Updated import
+from langchain.vectorstores import FAISS  # Fixed import path
+from langchain.embeddings import SentenceTransformerEmbeddings  # Fixed import path
 from PyPDF2 import PdfReader
 import docx
 
