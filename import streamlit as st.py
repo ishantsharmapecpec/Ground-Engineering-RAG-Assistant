@@ -4,8 +4,8 @@ import hashlib
 import time
 import streamlit as st
 import requests
-from langchain.splitters import CharacterTextSplitter
-  # Updated import
+from langchain.text_splitter import CharacterTextSplitter  # Updated import to avoid error
+
 from langchain.vectorstores import FAISS  # Fixed import path
 from langchain.embeddings import SentenceTransformerEmbeddings  # Fixed import path
 from PyPDF2 import PdfReader
@@ -144,4 +144,3 @@ if projects:
             st.warning("⚠️ No relevant documents found.")
 else:
     st.info("ℹ️ Enter a valid root path to discover projects.")
-
