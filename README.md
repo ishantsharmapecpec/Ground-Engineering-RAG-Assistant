@@ -27,5 +27,4 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Notes
-Do not upload API keys, confidential reports, or FAISS indexes to GitHub.
+
