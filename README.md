@@ -1,30 +1,30 @@
-# Ground Engineering RAG Assistant
+# Document Retrieval and Question Answering System
 
 ## Overview
 
-Ground Engineering RAG Assistant is a Retrieval-Augmented Generation (RAG) application designed to search and query engineering documentation using Large Language Models (LLMs).
+Document Retrieval and Question Answering System is a Retrieval-Augmented Generation (RAG) application designed to search and query large collections of documents using Large Language Models (LLMs).
 
-The system indexes engineering reports, specifications, investigation records, and technical documents, retrieves the most relevant content using vector similarity search, and generates answers grounded in the retrieved information.
+The system indexes PDF and Word documents, retrieves the most relevant content using vector similarity search, and generates context-aware responses grounded in the retrieved information.
 
-The application supports searching within a single project or across multiple projects and provides traceability by displaying the source files used to generate responses.
+The application supports searching within a single repository or across multiple repositories and provides traceability by displaying the source documents used to generate responses.
 
 ---
 
 ## Motivation
 
-Engineering organizations often maintain thousands of PDF and Word documents distributed across multiple projects. Locating relevant technical information can be time-consuming and highly dependent on individual knowledge of project archives.
+Organizations often maintain thousands of PDF and Word documents distributed across multiple projects and repositories. Locating relevant information can be time-consuming and highly dependent on individual knowledge of document storage locations.
 
-This project explores how modern retrieval techniques and Large Language Models can be combined to create a searchable knowledge base for engineering documentation.
+This project explores how semantic search, vector databases and Large Language Models can be combined to create an intelligent document retrieval system capable of answering natural language questions over large document collections.
 
-The objective is to reduce the time required to locate information while improving accessibility and knowledge sharing across projects.
+The objective is to improve information accessibility, reduce search time and enable efficient knowledge discovery.
 
 ---
 
 ## Key Features
 
-### Multi-Project Search
+### Multi-Repository Search
 
-Search within a selected project or across an entire document repository.
+Search within a selected repository or across an entire document collection.
 
 ### Vector-Based Retrieval
 
@@ -34,7 +34,7 @@ Documents are embedded using Sentence Transformers and stored in a FAISS vector 
 
 Relevant document chunks are retrieved and provided as context to a Large Language Model to generate grounded responses.
 
-### PDF and Word Document Support
+### Multi-Format Document Support
 
 Supports extraction of text from:
 
@@ -57,35 +57,30 @@ If the primary model is unavailable or rate-limited, the application automatical
 
 ## System Architecture
 
+```text
 User Query
-
-↓
-
+    │
+    ▼
 Embedding Generation
-
-↓
-
+    │
+    ▼
 FAISS Vector Search
-
-↓
-
+    │
+    ▼
 Relevant Document Retrieval
-
-↓
-
+    │
+    ▼
 Context Construction
-
-↓
-
+    │
+    ▼
 Large Language Model
-
-↓
-
+    │
+    ▼
 Answer Generation
-
-↓
-
+    │
+    ▼
 Source Display
+```
 
 ---
 
@@ -106,7 +101,7 @@ Source Display
 
 ## Example Workflow
 
-1. User selects a project or searches across all projects.
+1. User selects a repository or searches across multiple repositories.
 2. User enters a natural language query.
 3. Relevant document sections are retrieved using semantic search.
 4. Retrieved content is passed to a Large Language Model.
@@ -120,8 +115,8 @@ Source Display
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Ground-Engineering-RAG-Assistant.git
-cd Ground-Engineering-RAG-Assistant
+git clone https://github.com/YOUR_USERNAME/Document-Retrieval-and-Question-Answering-System.git
+cd Document-Retrieval-and-Question-Answering-System
 ```
 
 Install dependencies:
@@ -154,7 +149,7 @@ Do not commit API keys to GitHub.
 ## Repository Structure
 
 ```text
-Ground-Engineering-RAG-Assistant/
+Document-Retrieval-and-Question-Answering-System/
 │
 ├── app.py
 ├── requirements.txt
@@ -177,8 +172,23 @@ Planned improvements include:
 * User authentication
 * Cloud deployment
 * Multi-user support
-* Engineering drawing indexing
-* Project analytics dashboard
+* OCR support for scanned documents
+* Analytics dashboard
+
+---
+
+## Key Skills Demonstrated
+
+* Information Retrieval
+* Retrieval-Augmented Generation (RAG)
+* Semantic Search
+* Vector Databases
+* Large Language Models
+* Natural Language Processing
+* Python Development
+* Streamlit Application Development
+* Software Engineering
+* AI Application Development
 
 ---
 
@@ -186,7 +196,7 @@ Planned improvements include:
 
 This repository contains demonstration code only.
 
-No confidential project data, client information, proprietary documents, or API credentials are included.
+No confidential project data, client information, proprietary documents or API credentials are included.
 
 ---
 
@@ -194,10 +204,10 @@ No confidential project data, client information, proprietary documents, or API 
 
 Ishant Sharma
 
-Civil Engineer transitioning into Computer Science with interests in:
+Interests:
 
-* Information Retrieval
 * Artificial Intelligence
+* Information Retrieval
+* Machine Learning
 * Large Language Models
 * Software Engineering
-* Engineering Automation
